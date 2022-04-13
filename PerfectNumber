@@ -1,0 +1,22 @@
+public class PerfectNumber {
+    // write your code here
+    
+    public static boolean isPerfectNumber(int number){
+        if(number < 1){
+            return false;
+        }
+        int i;
+        int sum = 0;
+        for(i = 1; i < number; i++){
+            if(number%i == 0){
+                sum+=i;
+            }
+        }
+        
+        // will only return true if the sum of proper divisors == number, the number itself is not a propre divisor of itself, hence the for loop continuing
+        //while i is less than number
+   
+        return sum==number;
+        
+    }
+}
